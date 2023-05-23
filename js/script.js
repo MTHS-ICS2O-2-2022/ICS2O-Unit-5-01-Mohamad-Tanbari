@@ -1,5 +1,25 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) Mohamad All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Mohamad
+// Created on: May 2023
 // This file contains the JS functions for index.html
+
+'use strict'
+
+// This code generates a random number between 1 and 5 that is required for the guessNumber() function
+const randomNumber = Math.floor(Math.random() * 5) + 1
+
+/*
+* This function checks if the number guessed is correct
+*/
+function guessNumber() {
+  // Get user input
+  const guess = parseint(document.getElementById('guess').value)
+
+  // Check if guess is correct
+  if (guess == randomNumber) {
+    document.getElementById('answer').innerHTML = 'Your guess is Correct!'
+  } else {
+    document.getElementById("answer").innerHTML = "Your guess is Wrong :("
+  }
+}
